@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll animation</title>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./index.js">
+</head>
+<body>
+ <h1>Scroll To see the Enimation</h1>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+<div class="box"><h2>content</h2></div>
+  <script src="./index.js">
+const boxes = document.querySelectorAll('.box')
+window.addEventListener('scroll',checkboxes)
+checkboxes();
+
+
+
+function checkboxes(){
+  const triggerBottom = window.innerHeight / 5*4
+  boxes.forEach(box =>{
+    const boxtop = box.getBoundingClientRect()
+
+    if(boxtop = triggerBottom){
+      box.classList.add('show')
+    }else{
+      box.classList.remove('show')
+    }
+  })
+}
+
+  </script>
+</body>
+</html>
